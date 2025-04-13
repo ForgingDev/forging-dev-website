@@ -1,0 +1,85 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Information – Forging Dev
+
+## 🛠️ Project Name
+**Forging Dev** – Portfolio & presentation website for our software development company.
+
+## 🎯 Project Goal
+Create a sleek, performant, and secure marketing website to showcase our services, experience, and team. The site should reflect our brand's technical expertise and design finesse.
+
+---
+
+## 🚀 Tech Stack
+
+| Area             | Tech Used            |
+|------------------|----------------------|
+| Framework        | Next.js 15           |
+| Frontend Library | React 19             |
+| Language         | TypeScript           |
+| Styling          | Tailwind CSS         |
+| Hosting          | Vercel (preferred)   |
+| SEO              | Next.js Metadata API, Structured Data |
+| Analytics        | Plausible / Google Analytics (minimal, privacy-respecting) |
+| CI/CD            | GitHub Actions / Vercel |
+| Version Control  | Git + GitHub         |
+
+---
+
+## ✍️ Rules for Using Cursor
+
+### 1. **General Usage**
+- Cursor should **assist**, not replace thoughtful implementation.
+- All AI-generated code must be **reviewed and understood** before merging.
+- Do not blindly trust security-related suggestions.
+
+### 2. **Security Best Practices**
+- Always validate inputs (especially form handlers).
+- Sanitize content when rendering dynamic data.
+- Use HTTPS, set proper headers (`Content-Security-Policy`, `Strict-Transport-Security`, etc.).
+- Never expose secrets or credentials – use `.env.local`.
+
+### 3. **Component Rules**
+- Prefer **small, reusable components**.
+- All components should be **typed** with TypeScript.
+- Use Tailwind utility-first approach; no inline styles unless necessary.
+- Follow accessible HTML practices (a11y compliance is mandatory).
+
+### 4. **Routing & SEO**
+- Use **App Router** (Next.js 15).
+- All pages must define:
+  - `metadata` using Next.js 15 Metadata API
+  - Canonical URLs
+  - OpenGraph and Twitter card metadata
+- Use dynamic `sitemap.xml` and `robots.txt`.
+
+
+### 6. **Cursor Prompts Guidelines**
+- Be specific with Cursor prompts.
+- Avoid overly vague or magic-code requests.
+- Prefer: _“Generate a responsive hero section with CTA button using Tailwind and React 19”_
+- Avoid: _“Make me a cool homepage”_
+
+---
+
+## 🧩 Development Principles
+
+- **Performance-first**: Use Next.js optimizations, lazy loading, image optimization.
+- **SEO-friendly**: Focus on semantic HTML, structured data, meta tags.
+- **Mobile-first**: Design with responsiveness at the core.
+- **Clean code**: Follow consistent naming, TS strict mode, and modularity.
+
+---
+
+## ✅ TODOs Before Launch
+
+- [ ] Lighthouse score ≥ 95 on all pages
+- [ ] Schema.org JSON-LD setup
+- [ ] Favicon, OpenGraph image, manifest.json
+- [ ] 404 & 500 pages
+- [ ] GDPR & cookie banner (if analytics used)
+- [ ] Production build audit
+
