@@ -110,11 +110,39 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@theme custom {
+  --color-forge-primary: #9345ff;
+  --color-forge-secondary: #b121d6;
+  --color-forge-base: #0e0b11;
+  --color-forge-muted: #f1f1f1;
+  --color-forge-gradient: linear-gradient(to right, #9345ff, #b121d6);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  animation: marquee 25s linear infinite;
+  will-change: transform;
 }

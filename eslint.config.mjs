@@ -18,8 +18,8 @@ const eslintConfig = [
     "plugin:jsx-a11y/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:prettier/recommended",
     "plugin:react/jsx-runtime",
+    "prettier",
   ),
   {
     languageOptions: {
@@ -76,7 +76,6 @@ const eslintConfig = [
         },
       ],
       "import/no-unresolved": "error",
-      "prettier/prettier": "error",
     },
     files: ["*.ts", "*.tsx"],
   },
