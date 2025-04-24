@@ -1,4 +1,5 @@
 import Navbar from "@/components/ui/navbar/navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { type ReactNode } from "react";
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className} font-roboto-mono bg-forge-base container mx-auto py-6 text-white antialiased`}
       >
+        <SpeedInsights />
         <Navbar />
         {children}
       </body>
