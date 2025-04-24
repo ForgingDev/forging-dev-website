@@ -1,0 +1,323 @@
+import { type Metadata } from "next";
+
+export const baseUrl = "https://www.forging-dev.com";
+
+// Main organization schema
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Forging Dev",
+  url: baseUrl,
+  logo: `${baseUrl}/images/logo.png`,
+  sameAs: [
+    "https://www.instagram.com/forging_dev/",
+    // Add other social profiles here
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Sibiu",
+    addressRegion: "Sibiu",
+    addressCountry: "Romania",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+40727892022",
+    email: "forgingdev37@outlook.com",
+    contactType: "customer service",
+  },
+  description:
+    "Transform your business with custom web development, online stores & applications. Based in Romania, serving clients worldwide with innovative digital solutions.",
+};
+
+// Professional service schema
+export const professionalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Forging Dev",
+  image: `${baseUrl}/images/logo.png`,
+  "@id": baseUrl,
+  url: baseUrl,
+  telephone: "+40727892022",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Sibiu",
+    addressRegion: "Sibiu",
+    addressCountry: "Romania",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "45.7983",
+    longitude: "24.1256",
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
+  sameAs: [
+    "https://www.instagram.com/forging_dev/",
+    // Add other social profiles here
+  ],
+  priceRange: "$$",
+  servesCuisine: "Digital Services",
+};
+
+// Service-specific schema
+export const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "Website Development",
+        url: `${baseUrl}/#services`,
+        description:
+          "Elevate your brand with our tailored website solutions, designed to reflect your identity and engage your audience effectively.",
+        provider: {
+          "@type": "Organization",
+          name: "Forging Dev",
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "Online Store Development",
+        url: `${baseUrl}/#services`,
+        description:
+          "Step into online retail with our store development, providing intuitive platforms that showcase your products and deliver exceptional shopping experiences.",
+        provider: {
+          "@type": "Organization",
+          name: "Forging Dev",
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "Application Development",
+        url: `${baseUrl}/#services`,
+        description:
+          "Transform your ideas into reality with our custom application development services, designed to meet your unique requirements.",
+        provider: {
+          "@type": "Organization",
+          name: "Forging Dev",
+        },
+      },
+    },
+  ],
+};
+
+// Local business schema
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Forging Dev",
+  image: `${baseUrl}/images/logo.png`,
+  "@id": baseUrl,
+  url: baseUrl,
+  telephone: "+40727892022",
+  email: "forgingdev37@outlook.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Sibiu",
+    addressRegion: "Sibiu",
+    addressCountry: "Romania",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "45.7983",
+    longitude: "24.1256",
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
+  priceRange: "$$",
+};
+
+// Website schema with SiteNavigationElement for sections
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Forging Dev",
+  url: baseUrl,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${baseUrl}/?s={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+
+// Navigation schema for single-page sections
+export const navigationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  name: "Main Navigation",
+  hasPart: [
+    {
+      "@type": "SiteNavigationElement",
+      name: "Home",
+      url: baseUrl,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "About",
+      url: `${baseUrl}/#about`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Services",
+      url: `${baseUrl}/#services`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Portfolio",
+      url: `${baseUrl}/#portfolio`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "FAQ",
+      url: `${baseUrl}/faq`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Contact",
+      url: `${baseUrl}/#contact`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Privacy Policy",
+      url: `${baseUrl}/privacy-policy`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Terms of Service",
+      url: `${baseUrl}/terms-of-service`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Cookie Policy",
+      url: `${baseUrl}/cookie-policy`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "GDPR Compliance",
+      url: `${baseUrl}/gdpr`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Blog",
+      url: `${baseUrl}/blog`,
+    },
+  ],
+};
+
+// FAQ schema for FAQ page
+export const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What services does Forging Dev offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Forging Dev specializes in custom web development, e-commerce solutions, and application development. We create tailored digital solutions to help businesses establish their online presence, automate processes, and grow their digital footprint.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to develop a website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The timeline varies depending on the complexity of the project. A simple informational website can take 2-4 weeks, while complex e-commerce platforms or custom applications might take 2-6 months. During our initial consultation, we&apos;ll provide a more accurate timeline based on your specific requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is your development process?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our development process includes: 1) Discovery & Requirements Gathering, 2) Planning & Design, 3) Development, 4) Testing & Quality Assurance, 5) Deployment, and 6) Ongoing Support & Maintenance. We maintain transparent communication throughout the entire process.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide ongoing maintenance and support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer ongoing maintenance and support packages to ensure your website or application remains secure, up-to-date, and functioning optimally. These packages can be customized based on your specific needs and budget.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you handle website security?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Security is a top priority for us. We implement industry best practices including HTTPS encryption, regular security updates, secure coding practices, data encryption, and protection against common vulnerabilities like SQL injection and XSS attacks. We also offer ongoing security monitoring for our maintenance clients.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you help with SEO and digital marketing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! We build websites with SEO best practices in mind, including proper semantic HTML, schema markup, optimized page speed, and mobile responsiveness. We can also provide guidance on content strategy and integrate analytics tools to help you track and improve your online performance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What technologies do you use for development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We work with modern technologies like React, Next.js, TypeScript, and Tailwind CSS for frontend development. For backend solutions, we utilize Node.js, Express, and various database technologies depending on project requirements. We&apos;re technology-agnostic and choose the best tools for each specific project.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does a website or application cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Every project is unique, and pricing depends on complexity, features, timeline, and specific requirements. We provide detailed quotes after our initial consultation. We&apos;re transparent about costs and work to find solutions that fit your budget while meeting your business objectives.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with clients internationally?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, while we&apos;re based in Romania, we work with clients worldwide. We use modern communication tools and project management software to ensure smooth collaboration regardless of location or time zone differences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I get started with Forging Dev?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Getting started is easy! Simply contact us through our website&apos;s contact form, email, or phone. We&apos;ll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
+      },
+    },
+  ],
+};
+
+// Helper to generate schema for each page
+export function generateSchemaMetadata(
+  schemas: Record<string, unknown>[],
+): Metadata {
+  return {
+    other: {
+      "script:ld+json": schemas.map((schema) => JSON.stringify(schema)),
+    },
+  };
+}

@@ -11,5 +11,10 @@ export type ProjectType = {
   description: string;
   image: string;
   link: string;
-  tags?: string[]; // Optional array of tags
+  tags?: string[];
+};
+
+export type FAQType = {
+  question: string;
+  answer: string;
 };
