@@ -1,18 +1,24 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const NavbarLink = ({
   href,
   children,
   role,
+  className,
 }: {
   href: string;
   children: React.ReactNode;
   role?: string;
+  className?: string;
 }) => {
   return (
     <Link
       href={href}
-      className="text-neutral-300 transition-all hover:translate-y-[-2px] hover:text-white"
+      className={cn(
+        "text-neutral-300 transition-all hover:translate-y-[-2px] hover:text-white",
+        className,
+      )}
       aria-label={children?.toString()}
       role={role}
     >

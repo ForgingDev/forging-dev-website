@@ -33,6 +33,11 @@ export const SERVICES: ServiceType[] = [
     link: "/services/#seo",
     icon: "search",
   },
+  {
+    text: "Mobile Apps",
+    link: "/services/#mobile",
+    icon: "smartphone",
+  },
 ];
 
 export const PROJECTS: ProjectType[] = [
@@ -41,11 +46,13 @@ export const PROJECTS: ProjectType[] = [
     description: "Online Pawn Shop",
     image: "/projects/liquid_money.webp",
     link: "https://magazin.liquidmoney.ro/",
+    tags: ["E-Commerce", "Finance"],
   },
   {
     title: "Diamantenklotz",
     description: "Jewelry E-Commerce",
     image: "/projects/diamantenklotz.webp",
     link: "https://diamantenklotz.de/",
+    tags: ["Jewelry", "E-Commerce"],
   },
 ];

@@ -11,4 +11,5 @@ export type ProjectType = {
   description: string;
   image: string;
   link: string;
+  tags?: string[]; // Optional array of tags
 };

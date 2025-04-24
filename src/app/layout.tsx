@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} font-roboto-mono bg-forge-base container mx-auto px-4 py-6 text-white antialiased`}
+        className={`${poppins.className} font-roboto-mono bg-forge-base container mx-auto py-6 text-white antialiased`}
       >
         <Navbar />
         {children}
