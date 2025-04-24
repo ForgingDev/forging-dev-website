@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FormLabel } from "@/components/ui/form-label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { sendContactEmail } from "@/lib/actions/email.actions";
 import {
   contactFormSchema,
   type ContactFormValues,
@@ -14,13 +15,13 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const ContactForm = (): React.ReactElement => {
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -34,18 +35,22 @@ const ContactForm = (): React.ReactElement => {
   });
 
   const onSubmit = async (data: ContactFormValues): Promise<void> => {
-    setIsSubmitting(true);
+    setSubmitError(null);
+
     try {
-      // In a real implementation, you would send the form data to your API
-      // For now, we'll just simulate a successful submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Form data submitted:", data);
-      setSubmitSuccess(true);
-      reset();
+      const result = await sendContactEmail(data);
+
+      if (result.success) {
+        setSubmitSuccess(true);
+        reset();
+      } else {
+        setSubmitError(
+          result.error || "Failed to send message. Please try again.",
+        );
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
-    } finally {
-      setIsSubmitting(false);
+      setSubmitError("An unexpected error occurred. Please try again later.");
     }
   };
 
@@ -120,13 +125,19 @@ const ContactForm = (): React.ReactElement => {
         </div>
       )}
 
+      {submitError && (
+        <div className="rounded-md bg-red-500/10 p-3 text-center text-sm text-red-500">
+          {submitError}
+        </div>
+      )}
+
       <div className="flex justify-start">
         <Button
           type="submit"
           disabled={isSubmitting}
           className="border-forge-primary bg-forge-primary/10 hover:bg-forge-primary/20 text-forge-primary focus:ring-forge-primary w-fit border-2 py-5 text-base focus:ring-2 focus:outline-none"
         >
-          Send Message
+          {isSubmitting ? "Sending..." : "Send Message"}
           <SendIcon className="ml-1 size-4" aria-hidden="true" />
         </Button>
       </div>
