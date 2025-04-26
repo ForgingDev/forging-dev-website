@@ -311,6 +311,114 @@ export const faqSchema = {
   ],
 };
 
+// Privacy policy schema
+export const privacyPolicySchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Privacy Policy | Forging Dev",
+  description:
+    "Learn how Forging Dev handles your personal data and respects your privacy. Our privacy policy outlines our data collection, use, and protection practices.",
+  url: `${baseUrl}/privacy-policy`,
+  inLanguage: "en-US",
+  datePublished: "2024-06-15T12:00:00+02:00",
+  dateModified: "2024-06-15T12:00:00+02:00",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Forging Dev",
+    url: baseUrl,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Forging Dev",
+    logo: `${baseUrl}/images/logo.png`,
+  },
+  mainEntity: {
+    "@type": "WebPage",
+    mainContentOfPage: "Privacy Policy for Forging Dev",
+  },
+};
+
+// Terms of service schema
+export const termsOfServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Terms of Service | Forging Dev",
+  description:
+    "Read the terms and conditions governing the use of Forging Dev's services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.",
+  url: `${baseUrl}/terms-of-service`,
+  inLanguage: "en-US",
+  datePublished: "2024-06-15T12:00:00+02:00",
+  dateModified: "2024-06-15T12:00:00+02:00",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Forging Dev",
+    url: baseUrl,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Forging Dev",
+    logo: `${baseUrl}/images/logo.png`,
+  },
+  mainEntity: {
+    "@type": "WebPage",
+    mainContentOfPage: "Terms of Service for Forging Dev",
+  },
+};
+
+// GDPR compliance schema
+export const gdprSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "GDPR Compliance | Forging Dev",
+  description:
+    "Learn about Forging Dev's GDPR compliance measures and how we protect your personal data in accordance with EU regulations. Understand your rights and how to exercise them.",
+  url: `${baseUrl}/gdpr`,
+  inLanguage: "en-US",
+  datePublished: "2024-06-15T12:00:00+02:00",
+  dateModified: "2024-06-15T12:00:00+02:00",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Forging Dev",
+    url: baseUrl,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Forging Dev",
+    logo: `${baseUrl}/images/logo.png`,
+  },
+  mainEntity: {
+    "@type": "WebPage",
+    mainContentOfPage: "GDPR Compliance Information for Forging Dev",
+  },
+};
+
+// Cookie policy schema
+export const cookiePolicySchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Cookie Policy | Forging Dev",
+  description:
+    "Learn about how Forging Dev uses cookies and similar technologies on our website. Understand what cookies we use, why we use them, and how you can control them.",
+  url: `${baseUrl}/cookie-policy`,
+  inLanguage: "en-US",
+  datePublished: "2024-06-15T12:00:00+02:00",
+  dateModified: "2024-06-15T12:00:00+02:00",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Forging Dev",
+    url: baseUrl,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Forging Dev",
+    logo: `${baseUrl}/images/logo.png`,
+  },
+  mainEntity: {
+    "@type": "WebPage",
+    mainContentOfPage: "Cookie Policy for Forging Dev",
+  },
+};
+
 // Helper to generate schema for each page
 export function generateSchemaMetadata(
   schemas: Record<string, unknown>[],

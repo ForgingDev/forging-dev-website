@@ -1,3 +1,5 @@
+import { AnalyticsScripts } from "@/components/analytics-script";
+import CookieBanner from "@/components/ui/cookie-banner";
 import Footer from "@/components/ui/footer/footer";
 import Navbar from "@/components/ui/navbar/navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -90,8 +92,10 @@ export default function RootLayout({
       >
         <SpeedInsights />
         <Navbar />
-        <div className="container mx-auto py-6 pt-20">{children}</div>
+        <div className="container mx-auto py-6 pt-24">{children}</div>
         <Footer />
+        <CookieBanner />
+        <AnalyticsScripts />
       </body>
     </html>
   );

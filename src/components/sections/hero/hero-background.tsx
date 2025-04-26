@@ -45,7 +45,7 @@ export const HeroBackground = () => {
 
       {/* Floating code elements */}
       <motion.div
-        className="text-forge-secondary/40 absolute top-24 right-[15%] hidden lg:block"
+        className="text-forge-secondary/40 absolute top-12 right-[15%] hidden lg:block"
         variants={floatingIconVariants}
         animate="animate"
       >
@@ -53,7 +53,7 @@ export const HeroBackground = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-32 left-[15%] hidden text-blue-500/40 lg:block"
+        className="absolute bottom-12 left-[15%] hidden text-blue-500/40 lg:block"
         variants={floatingIconVariants}
         animate="animate"
         transition={{

@@ -16,11 +16,11 @@ const FAQ = () => {
   };
 
   return (
-    <motion.main
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="px-4 py-12 sm:px-6 lg:px-8"
+      className="px-4 pb-12 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-4xl">
         <motion.div
@@ -68,7 +68,7 @@ const FAQ = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            <Link href="/#contact">
+            <Link href={{ pathname: "/", hash: "#contact" }}>
               <Button className="border-forge-primary bg-forge-primary hover:bg-forge-primary/90 shadow-forge-primary/20 hover:shadow-forge-primary/40 w-full border-2 px-6 py-6 text-lg font-medium text-white shadow-lg transition-all duration-300 focus:ring-2 focus:outline-none sm:w-auto">
                 Get in Touch
                 <MessageCircleMoreIcon
@@ -81,7 +81,7 @@ const FAQ = () => {
           </motion.div>
         </motion.div>
       </div>
-    </motion.main>
+    </motion.div>
   );
 };
 

@@ -128,3 +128,9 @@ export const NAVBAR_LINKS = [
     href: "/#portfolio",
   },
 ];
+
+export const CONSENT_KEY = "forging-dev-cookie-consent";
+export const CONSENT_STATUS_COOKIE = "forging-dev-cookie-consent-status";
+export const CONSENT_CATEGORIES_COOKIE =
+  "forging-dev-cookie-consent-categories";
+export const COOKIE_EXPIRY_DAYS = 365; // 1 year

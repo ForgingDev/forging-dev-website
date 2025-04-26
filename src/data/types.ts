@@ -18,3 +18,17 @@ export type FAQType = {
   question: string;
   answer: string;
 };
+
+export type CookieConsentStatus = "accepted" | "rejected" | "pending";
+export type CookieCategories = {
+  essential: boolean; // Always true, can't be rejected
+  analytics: boolean;
+  functional: boolean;
+  targeting: boolean;
+};
+
+export type CookieConsent = {
+  status: CookieConsentStatus;
+  categories: CookieCategories;
+  timestamp: number;
+};

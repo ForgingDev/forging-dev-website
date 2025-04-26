@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative flex min-h-[90vh] items-center"
+      className="relative flex min-h-[80vh] items-center"
     >
       <HeroBackground />
 
