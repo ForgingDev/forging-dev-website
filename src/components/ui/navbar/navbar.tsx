@@ -36,6 +36,12 @@ const Navbar = () => {
     });
   };
 
+  const handleLogoClick = () => {
+    if (isMenuOpen) {
+      toggleMenu();
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -130,7 +136,7 @@ const Navbar = () => {
           />
 
           <div className="container mx-auto flex items-center justify-between px-4">
-            <Logo variants={itemVariants} />
+            <Logo variants={itemVariants} onClick={handleLogoClick} />
 
             {/* Mobile menu button */}
             <motion.button
@@ -152,7 +158,7 @@ const Navbar = () => {
 
             <DesktopNavbar itemVariants={itemVariants} />
 
-            <MobileNavbar isMenuOpen={isMenuOpen} />
+            <MobileNavbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
           </div>
         </motion.nav>
       </header>

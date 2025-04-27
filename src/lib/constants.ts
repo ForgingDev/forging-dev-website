@@ -91,22 +91,22 @@ export const FAQS: FAQType[] = [
   {
     question: "What technologies do you use for development?",
     answer:
-      "We work with modern technologies like React, Next.js, TypeScript, and Tailwind CSS for frontend development. For backend solutions, we utilize Node.js, Express, and various database technologies depending on project requirements. We&apos;re technology-agnostic and choose the best tools for each specific project.",
+      "We work with modern technologies like React, Next.js, TypeScript, and Tailwind CSS for frontend development. For backend solutions, we utilize Node.js, Express, and various database technologies depending on project requirements. We're technology-agnostic and choose the best tools for each specific project.",
   },
   {
     question: "How much does a website or application cost?",
     answer:
-      "Every project is unique, and pricing depends on complexity, features, timeline, and specific requirements. We provide detailed quotes after our initial consultation. We&apos;re transparent about costs and work to find solutions that fit your budget while meeting your business objectives.",
+      "Every project is unique, and pricing depends on complexity, features, timeline, and specific requirements. We provide detailed quotes after our initial consultation. We're transparent about costs and work to find solutions that fit your budget while meeting your business objectives.",
   },
   {
     question: "Do you work with clients internationally?",
     answer:
-      "Yes, while we&apos;re based in Romania, we work with clients worldwide. We use modern communication tools and project management software to ensure smooth collaboration regardless of location or time zone differences.",
+      "Yes, while we're based in Romania, we work with clients worldwide. We use modern communication tools and project management software to ensure smooth collaboration regardless of location or time zone differences.",
   },
   {
     question: "How can I get started with Forging Dev?",
     answer:
-      "Getting started is easy! Simply contact us through our website&apos;s contact form, email, or phone. We&apos;ll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
+      "Getting started is easy! Simply contact us through our website's contact form, email, or phone. We'll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
   },
 ];
 

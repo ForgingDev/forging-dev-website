@@ -9,7 +9,7 @@ const Process = () => {
   return (
     <motion.section
       aria-labelledby="process-heading"
-      className="relative px-4 py-20"
+      className="relative overflow-hidden px-4 py-20 xl:overflow-visible"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}

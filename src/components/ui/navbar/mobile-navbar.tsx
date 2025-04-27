@@ -7,9 +7,10 @@ import { AnimatePresence, motion } from "framer-motion";
 
 type Props = {
   isMenuOpen: boolean;
+  toggleMenu: () => void;
 };
 
-const MobileNavbar = ({ isMenuOpen }: Props) => {
+const MobileNavbar = ({ isMenuOpen, toggleMenu }: Props) => {
   const mobileMenuVariants = {
     hidden: {
       opacity: 0,
@@ -54,6 +55,7 @@ const MobileNavbar = ({ isMenuOpen }: Props) => {
           variants={mobileMenuVariants}
           className="fixed inset-0 h-screen w-screen bg-gradient-to-b from-black/90 to-purple-950/90 backdrop-blur-md lg:hidden"
           aria-hidden={!isMenuOpen}
+          onClick={toggleMenu}
         >
           <motion.div
             className="flex h-full flex-col items-center justify-center gap-8 p-6"

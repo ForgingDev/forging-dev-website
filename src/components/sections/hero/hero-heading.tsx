@@ -38,7 +38,7 @@ export const HeroHeading = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-300"
+        className="mt-6 max-w-xl leading-relaxed text-neutral-300 sm:text-lg"
       >
         We help businesses evolve with modern, high-performance software that
         enhances user experience, boosts productivity, and drives growth.

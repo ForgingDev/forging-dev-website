@@ -53,7 +53,7 @@ export const HeroBackground = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-12 left-[15%] hidden text-blue-500/40 lg:block"
+        className="absolute bottom-6 left-[15%] hidden text-blue-500/40 lg:block xl:bottom-2 2xl:bottom-12"
         variants={floatingIconVariants}
         animate="animate"
         transition={{
@@ -61,7 +61,7 @@ export const HeroBackground = () => {
           duration: 4,
         }}
       >
-        <RocketIcon size={40} />
+        <RocketIcon size={50} />
       </motion.div>
     </>
   );

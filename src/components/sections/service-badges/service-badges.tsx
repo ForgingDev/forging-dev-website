@@ -10,7 +10,7 @@ const ServiceBadges = () => {
     <motion.section
       id="services"
       aria-label="Our Services"
-      className="relative scroll-mt-24 py-20"
+      className="relative scroll-mt-24 overflow-hidden py-20 xl:overflow-visible"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

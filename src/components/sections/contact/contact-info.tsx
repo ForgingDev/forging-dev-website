@@ -27,16 +27,18 @@ const ContactItem = ({
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
       className={cn(
-        "group flex items-center gap-4 rounded-lg p-4 transition-all",
+        "group flex items-center gap-4 overflow-hidden rounded-lg py-4 break-words transition-all",
         "hover:bg-forge-primary/5 focus:ring-forge-primary/50 focus:ring-2 focus:outline-none",
       )}
     >
-      <div className="bg-forge-primary/10 text-forge-primary group-hover:bg-forge-primary/20 flex size-12 items-center justify-center rounded-full transition-all">
+      <div className="bg-forge-primary/10 text-forge-primary group-hover:bg-forge-primary/20 flex size-12 flex-shrink-0 items-center justify-center rounded-full transition-all">
         {icon}
       </div>
       <div className="flex flex-col">
         <span className="text-sm font-medium text-neutral-400">{label}</span>
-        <span className="text-base font-semibold">{value}</span>
+        <span className="block text-base font-semibold wrap-anywhere">
+          {value}
+        </span>
       </div>
     </Link>
   );

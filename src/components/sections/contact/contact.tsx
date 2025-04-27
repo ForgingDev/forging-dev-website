@@ -11,7 +11,7 @@ const Contact = (): React.ReactElement => {
     <motion.section
       aria-labelledby="contact-heading"
       id="contact"
-      className="relative scroll-mt-28 px-4 py-20"
+      className="relative scroll-mt-28 overflow-hidden px-4 py-20 xl:overflow-visible"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}

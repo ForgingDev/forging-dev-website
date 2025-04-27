@@ -12,13 +12,13 @@ export const HeroSocialLinks = () => {
       variants={socialIconVariants}
       initial="hidden"
       animate="visible"
-      className="mt-10 flex items-center gap-6"
+      className="mt-10 flex items-center justify-between gap-4 sm:justify-start"
     >
       <span className="text-sm font-medium text-neutral-400">
         Connect with us:
       </span>
 
-      <div className="flex gap-4">
+      <div className="flex gap-2 sm:gap-4">
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.1, y: -5 }}

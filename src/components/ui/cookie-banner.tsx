@@ -189,7 +189,7 @@ export const CookieBanner = () => {
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
-                  className="flex items-center justify-between border-b border-white/10 pb-4"
+                  className="flex items-center justify-between gap-4 border-b border-white/10 pb-4"
                 >
                   <div>
                     <h4 className="font-medium text-white">
@@ -216,7 +216,7 @@ export const CookieBanner = () => {
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.2, delay: 0.2 }}
-                  className="flex items-center justify-between border-b border-white/10 pb-4"
+                  className="flex items-center justify-between gap-4 border-b border-white/10 pb-4"
                 >
                   <div>
                     <h4 className="font-medium text-white">
@@ -243,7 +243,7 @@ export const CookieBanner = () => {
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.2, delay: 0.3 }}
-                  className="flex items-center justify-between border-b border-white/10 pb-4"
+                  className="flex items-center justify-between gap-4 border-b border-white/10 pb-4"
                 >
                   <div>
                     <h4 className="font-medium text-white">
@@ -270,7 +270,7 @@ export const CookieBanner = () => {
                   initial={{ y: 10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.2, delay: 0.4 }}
-                  className="flex items-center justify-between border-b border-white/10 pb-4"
+                  className="flex items-center justify-between gap-4 border-b border-white/10 pb-4"
                 >
                   <div>
                     <h4 className="font-medium text-white">

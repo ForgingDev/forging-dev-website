@@ -13,9 +13,10 @@ type Props = {
       y: number;
     };
   };
+  onClick?: () => void;
 };
 
-const Logo = ({ variants }: Props) => {
+const Logo = ({ variants, onClick }: Props) => {
   return (
     <motion.div
       variants={variants}
@@ -27,6 +28,7 @@ const Logo = ({ variants }: Props) => {
         href="/"
         className="flex items-center gap-2"
         aria-label="Forging Dev - Home"
+        onClick={onClick}
       >
         <div className="from-forge-secondary/80 flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br to-purple-500/80 shadow-lg">
           <CodeIcon className="h-4 w-4 text-white" />

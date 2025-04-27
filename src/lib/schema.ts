@@ -241,7 +241,7 @@ export const faqSchema = {
       name: "How long does it take to develop a website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The timeline varies depending on the complexity of the project. A simple informational website can take 2-4 weeks, while complex e-commerce platforms or custom applications might take 2-6 months. During our initial consultation, we&apos;ll provide a more accurate timeline based on your specific requirements.",
+        text: "The timeline varies depending on the complexity of the project. A simple informational website can take 2-4 weeks, while complex e-commerce platforms or custom applications might take 2-6 months. During our initial consultation, we'll provide a more accurate timeline based on your specific requirements.",
       },
     },
     {
@@ -281,7 +281,7 @@ export const faqSchema = {
       name: "What technologies do you use for development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We work with modern technologies like React, Next.js, TypeScript, and Tailwind CSS for frontend development. For backend solutions, we utilize Node.js, Express, and various database technologies depending on project requirements. We&apos;re technology-agnostic and choose the best tools for each specific project.",
+        text: "We work with modern technologies like React, Next.js, TypeScript, and Tailwind CSS for frontend development. For backend solutions, we utilize Node.js, Express, and various database technologies depending on project requirements. We're technology-agnostic and choose the best tools for each specific project.",
       },
     },
     {
@@ -289,7 +289,7 @@ export const faqSchema = {
       name: "How much does a website or application cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every project is unique, and pricing depends on complexity, features, timeline, and specific requirements. We provide detailed quotes after our initial consultation. We&apos;re transparent about costs and work to find solutions that fit your budget while meeting your business objectives.",
+        text: "Every project is unique, and pricing depends on complexity, features, timeline, and specific requirements. We provide detailed quotes after our initial consultation. We're transparent about costs and work to find solutions that fit your budget while meeting your business objectives.",
       },
     },
     {
@@ -297,7 +297,7 @@ export const faqSchema = {
       name: "Do you work with clients internationally?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, while we&apos;re based in Romania, we work with clients worldwide. We use modern communication tools and project management software to ensure smooth collaboration regardless of location or time zone differences.",
+        text: "Yes, while we're based in Romania, we work with clients worldwide. We use modern communication tools and project management software to ensure smooth collaboration regardless of location or time zone differences.",
       },
     },
     {
@@ -305,7 +305,7 @@ export const faqSchema = {
       name: "How can I get started with Forging Dev?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Getting started is easy! Simply contact us through our website&apos;s contact form, email, or phone. We&apos;ll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
+        text: "Getting started is easy! Simply contact us through our website's contact form, email, or phone. We'll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
       },
     },
   ],
