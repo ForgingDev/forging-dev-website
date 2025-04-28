@@ -8,6 +8,28 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // Apply security headers to all routes
+        source: "/:path*",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains; preload", // 1 year with subdomains and preload
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
+          },
+        ],
+      },
+      {
         source: "/hero-illustration.svg",
         headers: [
           {
