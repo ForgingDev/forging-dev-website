@@ -23,6 +23,10 @@ const CookiePreferences = () => {
     analytics: false,
     functional: false,
     targeting: false,
+    ad_storage: false,
+    ad_user_data: false,
+    ad_personalization: false,
+    analytics_storage: false,
   });
 
   // Animation variants
@@ -73,6 +77,10 @@ const CookiePreferences = () => {
       analytics: true,
       functional: true,
       targeting: true,
+      ad_storage: true,
+      ad_user_data: true,
+      ad_personalization: true,
+      analytics_storage: true,
     });
   };
 
@@ -90,6 +98,10 @@ const CookiePreferences = () => {
       analytics: false,
       functional: false,
       targeting: false,
+      ad_storage: false,
+      ad_user_data: false,
+      ad_personalization: false,
+      analytics_storage: false,
     });
   };
 

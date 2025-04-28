@@ -47,6 +47,10 @@ export async function acceptAllServerCookies() {
     analytics: true,
     functional: true,
     targeting: true,
+    ad_storage: true,
+    ad_user_data: true,
+    ad_personalization: true,
+    analytics_storage: true,
   };
 
   return saveConsentCookies("accepted", categories);
@@ -61,6 +65,10 @@ export async function rejectAllServerCookies() {
     analytics: false,
     functional: false,
     targeting: false,
+    ad_storage: false,
+    ad_user_data: false,
+    ad_personalization: false,
+    analytics_storage: false,
   };
 
   return saveConsentCookies("rejected", categories);
