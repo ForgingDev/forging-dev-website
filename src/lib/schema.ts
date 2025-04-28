@@ -419,6 +419,59 @@ export const cookiePolicySchema = {
   },
 };
 
+/**
+ * Generates an SEO-optimized page title
+ * @param pageTitle The specific page title
+ * @param includeBrand Whether to include the brand name
+ * @returns A properly formatted title between 10-60 characters
+ */
+export function generatePageTitle(
+  pageTitle: string,
+  includeBrand = true,
+): string {
+  const brandName = "Forging Dev";
+  const separator = " | ";
+
+  // Clean up the page title
+  const cleanTitle = pageTitle.trim();
+
+  // If title already includes brand, don't add it again
+  const alreadyIncludesBrand = cleanTitle.includes(brandName);
+
+  // Create the full title
+  let fullTitle =
+    alreadyIncludesBrand || !includeBrand
+      ? cleanTitle
+      : `${cleanTitle}${separator}${brandName}`;
+
+  // Check length and truncate if necessary
+  if (fullTitle.length > 60) {
+    // If we have the brand name and separator, try removing them first
+    if (includeBrand && !alreadyIncludesBrand) {
+      fullTitle = cleanTitle;
+    }
+
+    // If still too long, truncate and add ellipsis
+    if (fullTitle.length > 60) {
+      fullTitle = fullTitle.substring(0, 57) + "...";
+    }
+  }
+
+  // Check if title is too short
+  if (fullTitle.length < 10) {
+    // If brand isn't included, add it
+    if (!includeBrand && !alreadyIncludesBrand) {
+      fullTitle = `${fullTitle}${separator}${brandName}`;
+    }
+    // If still too short, consider adding a descriptor
+    if (fullTitle.length < 10) {
+      fullTitle = `${brandName} - Custom Web Development`;
+    }
+  }
+
+  return fullTitle;
+}
+
 // Helper to generate schema for each page
 export function generateSchemaMetadata(
   schemas: Record<string, unknown>[],
@@ -426,6 +479,56 @@ export function generateSchemaMetadata(
   return {
     other: {
       "script:ld+json": schemas.map((schema) => JSON.stringify(schema)),
+    },
+  };
+}
+
+/**
+ * Generate complete page metadata including title, description, and schema
+ * @param title Page title (will be optimized to 10-60 chars)
+ * @param description Page description
+ * @param schemas Schema.org structured data
+ * @param path Page path (without domain) for canonical URL
+ * @returns Next.js Metadata object
+ */
+export function generatePageMetadata(
+  title: string,
+  description: string,
+  schemas: Record<string, unknown>[] = [],
+  path: string = "",
+): Metadata {
+  const optimizedTitle = generatePageTitle(title);
+  // Ensure path starts with / if not empty and not already starting with /
+  const normalizedPath = path && !path.startsWith("/") ? `/${path}` : path;
+  const canonicalUrl = normalizedPath ? `${baseUrl}${normalizedPath}` : baseUrl;
+
+  return {
+    title: optimizedTitle,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    ...generateSchemaMetadata(schemas),
+    openGraph: {
+      title: optimizedTitle,
+      description,
+      type: "website",
+      url: canonicalUrl,
+      siteName: "Forging Dev",
+      images: [
+        {
+          url: `${baseUrl}/images/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: "Forging Dev - Custom Web Development",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: optimizedTitle,
+      description,
+      images: [`${baseUrl}/images/og-image.jpg`],
     },
   };
 }

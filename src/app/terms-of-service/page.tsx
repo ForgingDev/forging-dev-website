@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Read the terms and conditions governing the use of Forging Dev's services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.",
   alternates: {
-    canonical: "/terms-of-service",
+    canonical: "https://www.forging-dev.com/terms-of-service",
   },
   openGraph: {
     title: "Terms of Service | Forging Dev",

@@ -10,32 +10,32 @@ export const CONTACT_INFO = {
 export const SERVICES: ServiceType[] = [
   {
     text: "Website Development",
-    link: "/services/#website",
+    link: "/#services",
     icon: "laptop",
   },
   {
     text: "E-Commerce Solutions",
-    link: "/services/#ecommerce",
+    link: "/#services",
     icon: "shopping-cart",
   },
   {
     text: "Personalized SaaS",
-    link: "/services/#saas",
+    link: "/#services",
     icon: "cloud",
   },
   {
     text: "UI/UX Design",
-    link: "/services/#uiux",
+    link: "/#services",
     icon: "pen-tool",
   },
   {
     text: "Strategic SEO",
-    link: "/services/#seo",
+    link: "/#services",
     icon: "search",
   },
   {
     text: "Mobile Apps",
-    link: "/services/#mobile",
+    link: "/#services",
     icon: "smartphone",
   },
 ];

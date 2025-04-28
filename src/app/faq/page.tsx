@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Find answers to frequently asked questions about our web development, e-commerce, and application development services at Forging Dev.",
   alternates: {
-    canonical: "/faq",
+    canonical: "https://www.forging-dev.com/faq",
   },
   openGraph: {
     title: "Frequently Asked Questions | Forging Dev",

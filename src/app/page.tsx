@@ -5,30 +5,22 @@ import Process from "@/components/sections/process/process";
 import Projects from "@/components/sections/projects/projects";
 import ServiceBadges from "@/components/sections/service-badges/service-badges";
 import {
-  generateSchemaMetadata,
-  localBusinessSchema,
-  navigationSchema,
+  generatePageMetadata,
   organizationSchema,
-  professionalServiceSchema,
-  servicesSchema,
   websiteSchema,
 } from "@/lib/schema";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  ...generateSchemaMetadata([
-    organizationSchema,
-    professionalServiceSchema,
-    localBusinessSchema,
-    servicesSchema,
-    websiteSchema,
-    navigationSchema,
-  ]),
-};
+export const metadata: Metadata = generatePageMetadata(
+  "Custom Web Development & Digital Solutions",
+  "Transform your business with custom web development, online stores & applications. Based in Romania, serving clients worldwide with innovative digital solutions.",
+  [organizationSchema, websiteSchema],
+  "/",
+);
 
 const Homepage = () => {
   return (
-    <main>
+    <main className="flex min-h-screen flex-col">
       <Hero />
       <ServiceBadges />
       <About />
