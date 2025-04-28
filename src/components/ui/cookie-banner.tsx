@@ -51,6 +51,11 @@ const CookieBanner = () => {
     analytics: false,
     functional: false,
     targeting: false,
+    // Google Consent Mode v2 properties
+    ad_storage: false,
+    ad_user_data: false,
+    ad_personalization: false,
+    analytics_storage: false,
   });
 
   // Load consent from localStorage on mount
@@ -127,10 +132,10 @@ const CookieBanner = () => {
                   We value your privacy
                 </h3>
                 <p className="text-sm text-gray-300">
-                  We use cookies to enhance your browsing experience, serve
-                  personalized ads or content, and analyze our traffic. By
-                  clicking &quot;Accept All&quot;, you consent to our use of
-                  cookies.{" "}
+                  We use cookies and similar technologies to enhance your
+                  browsing experience, analyze our traffic, and display
+                  personalized content and ads. By clicking &quot;Accept
+                  All&quot;, you consent to our use of cookies.{" "}
                   <Link
                     href="/cookie-policy"
                     className="text-forge-primary hover:text-forge-secondary underline transition-colors"

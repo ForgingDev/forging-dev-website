@@ -25,6 +25,11 @@ export type CookieCategories = {
   analytics: boolean;
   functional: boolean;
   targeting: boolean;
+  // Google Consent Mode v2 properties
+  ad_storage: boolean; // Controls storage (cookies, local storage) for advertising
+  ad_user_data: boolean; // Controls sending user data to Google for advertising purposes
+  ad_personalization: boolean; // Controls personalization of ads
+  analytics_storage: boolean; // Controls storage for analytics purposes
 };
 
 export type CookieConsent = {

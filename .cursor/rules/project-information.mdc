@@ -23,7 +23,7 @@ Create a sleek, performant, and secure marketing website to showcase our service
 | Styling          | Tailwind CSS         |
 | Hosting          | Vercel (preferred)   |
 | SEO              | Next.js Metadata API, Structured Data |
-| Analytics        | Plausible / Google Analytics (minimal, privacy-respecting) |
+| Analytics        | Google Analytics (minimal, privacy-respecting) |
 | CI/CD            | GitHub Actions / Vercel |
 | Version Control  | Git + GitHub         |
 

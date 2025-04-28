@@ -331,7 +331,6 @@ const CookiePolicy = () => {
             <li>Google Analytics</li>
             <li>Google Ads</li>
             <li>Facebook Pixel</li>
-            <li>Plausible Analytics</li>
           </ul>
           <p className="mt-4">
             These third parties may have access to information about your use of
@@ -339,6 +338,28 @@ const CookiePolicy = () => {
             have collected independently about your online activities across
             different websites.
           </p>
+          <p className="mt-4">
+            We implement Google&apos;s Consent Mode v2 which ensures that
+            Google&apos;s services respect your cookie preferences. Depending on
+            your choices:
+          </p>
+          <ul className="space-y-2 text-gray-300">
+            <li>
+              <strong>If you accept Analytics cookies:</strong> Google Analytics
+              will use cookies to collect data about your site usage.
+            </li>
+            <li>
+              <strong>If you accept Marketing/Targeting cookies:</strong> Google
+              may use cookies for advertising purposes, including ad
+              personalization and user data processing.
+            </li>
+            <li>
+              <strong>If you reject these cookies:</strong> Google services will
+              respect your choice and limit data collection accordingly, though
+              some basic site functionality measurement may still occur without
+              using cookies.
+            </li>
+          </ul>
         </div>
       </motion.section>
 

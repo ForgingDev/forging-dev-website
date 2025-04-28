@@ -3,7 +3,12 @@ import { ServerCookieChecker } from "./server-cookie-checker";
 
 /**
  * Server Component that conditionally loads analytics scripts
- * based on the user's cookie consent preferences
+ * based on the user's cookie consent preferences and Google Consent Mode
+ *
+ * Note: With Google Consent Mode v2, we don't need to completely prevent the script from loading.
+ * Instead, Google scripts will respect the consent state set by the GoogleConsentScript.
+ * However, we still use ServerCookieChecker as an additional layer of protection to ensure
+ * no unnecessary scripts are loaded without consent.
  */
 export function AnalyticsScripts() {
   return (
@@ -14,16 +19,17 @@ export function AnalyticsScripts() {
         <></>
       }
     >
-      {/* Example analytics scripts that will only be included if analytics cookies are allowed */}
+      {/* 
+        Google Analytics is now controlled by Consent Mode in layout.tsx
+        Additional analytics scripts can be added here if needed
+      */}
       <Script
-        id="google-analytics"
+        id="analytics-initialization"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            // Your analytics code here
-            console.log('Analytics script loaded');
-            // This would be your actual analytics initialization code
-            // For example Google Analytics or similar
+            // Custom analytics initialization code
+            console.log('Analytics script loaded with consent');
           `,
         }}
       />

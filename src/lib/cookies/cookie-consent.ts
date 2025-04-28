@@ -9,6 +9,11 @@ const defaultConsent: CookieConsent = {
     analytics: false,
     functional: false,
     targeting: false,
+    // Google Consent Mode v2 properties - all denied by default
+    ad_storage: false,
+    ad_user_data: false,
+    ad_personalization: false,
+    analytics_storage: false,
   },
   timestamp: 0,
 };
@@ -62,6 +67,11 @@ export const acceptAllCookies = (): void => {
       analytics: true,
       functional: true,
       targeting: true,
+      // Google Consent Mode v2 properties - all granted when all cookies accepted
+      ad_storage: true,
+      ad_user_data: true,
+      ad_personalization: true,
+      analytics_storage: true,
     },
     timestamp: Date.now(),
   });
@@ -78,6 +88,11 @@ export const rejectAllCookies = (): void => {
       analytics: false,
       functional: false,
       targeting: false,
+      // Google Consent Mode v2 properties - all denied
+      ad_storage: false,
+      ad_user_data: false,
+      ad_personalization: false,
+      analytics_storage: false,
     },
     timestamp: Date.now(),
   });
