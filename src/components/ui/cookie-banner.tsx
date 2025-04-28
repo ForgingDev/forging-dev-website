@@ -43,7 +43,7 @@ const checkboxVariants = {
   unchecked: { scale: 1 },
 };
 
-export const CookieBanner = () => {
+const CookieBanner = () => {
   const [consent, setConsent] = useState<CookieConsent | null>(null);
   const [showDetails, setShowDetails] = useState(false);
   const [preferences, setPreferences] = useState<CookieCategories>({
