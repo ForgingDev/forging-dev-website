@@ -20,6 +20,7 @@ export const HeroIllustration = () => {
               src="/hero-illustration.svg"
               alt="Software development illustration"
               fill
+              priority
               className="object-cover"
             />
           </div>

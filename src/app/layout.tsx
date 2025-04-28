@@ -88,7 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} font-roboto-mono bg-forge-base text-white antialiased`}
+        className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}
       >
         <SpeedInsights />
         <Navbar />

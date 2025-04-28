@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CodeIcon, RocketIcon } from "lucide-react";
+import { CodeIcon } from "lucide-react";
 import { floatingIconVariants } from "./animation-variants";
 
 export const HeroBackground = () => {
@@ -45,23 +45,11 @@ export const HeroBackground = () => {
 
       {/* Floating code elements */}
       <motion.div
-        className="text-forge-secondary/40 absolute top-12 right-[15%] hidden lg:block"
+        className="text-forge-secondary/40 absolute top-[5%] right-[15%] hidden lg:block"
         variants={floatingIconVariants}
         animate="animate"
       >
         <CodeIcon size={50} />
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-6 left-[15%] hidden text-blue-500/40 lg:block xl:bottom-2 2xl:bottom-12"
-        variants={floatingIconVariants}
-        animate="animate"
-        transition={{
-          delay: 1.5,
-          duration: 4,
-        }}
-      >
-        <RocketIcon size={50} />
       </motion.div>
     </>
   );
