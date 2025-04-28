@@ -215,11 +215,6 @@ export const navigationSchema = {
       name: "GDPR Compliance",
       url: `${baseUrl}/gdpr`,
     },
-    {
-      "@type": "SiteNavigationElement",
-      name: "Blog",
-      url: `${baseUrl}/blog`,
-    },
   ],
 };
 

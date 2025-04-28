@@ -19,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms-of-service",
     "/cookie-policy",
     "/gdpr",
-    "/blog",
     // Add actual pages here if you create them in the future
   ].map((route) => ({
     url: `${baseUrl}${route}`,

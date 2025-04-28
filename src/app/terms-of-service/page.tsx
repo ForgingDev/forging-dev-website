@@ -9,7 +9,7 @@ import { Metadata } from "next";
 import TermsOfService from "./components/terms-of-service";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Forging Dev | Web & App Development Studio",
+  title: "Terms of Service | Forging Dev | Web Development Studio",
   description:
     "Read the terms and conditions governing the use of Forging Dev's services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.",
   alternates: {

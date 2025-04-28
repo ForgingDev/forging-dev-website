@@ -39,16 +39,6 @@ export const FooterCompany = () => {
             </motion.div>
           </Link>
         </li>
-        <li>
-          <Link
-            href="/blog"
-            className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
-          >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
-              Blog
-            </motion.div>
-          </Link>
-        </li>
       </ul>
     </motion.div>
   );
